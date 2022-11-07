@@ -1,0 +1,16 @@
+
+ _cAssunto 	:= "Protheus CMP - Minha Prestação de Contas - " + Alltrim( (cTmpAlias)->FLF_PRESTA)
+ _cCorpo 	:= "<!DOCTYPE html> <html> <head> </head> <body>"
+ _cCorpo 	+= "<h1>" + "PRESTAÇÃO DE CONTAS :"+ "</h1>"
+ IF (cTmpAlias)->FLF_STATUS = '5'
+ _cCorpo 	+= "<h2>" + Alltrim( (cTmpAlias)->FLF_PRESTA) + " " +  "REPROVADA.</h2>"
+ _cCorpo 	+= "<h3>Entre no APP para Analise .</h3><br>"
+ ELSE
+ _cCorpo 	+= "<h2>" + Alltrim( (cTmpAlias)->FLF_PRESTA) + " " +  "PENDENTE.</h2>"
+ _cCorpo 	+= "<h3>Entre no Sistema Protheus para Analise .</h3><br>"
+ _cCorpo 	+= "<h3>Mudulo 05 - Financeiro - Viagens - Prestação de Contas</h3>"
+ ENDIF
+
+_cCorpo 	+= "</body> </html>"
+
+
